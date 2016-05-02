@@ -1,1 +1,0 @@
-# cs342-lchen8-secret-sharing

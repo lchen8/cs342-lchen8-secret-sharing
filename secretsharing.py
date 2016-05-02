@@ -54,7 +54,7 @@ def recover_master(p, t, shadows, moduli):
 # python secretsharing.py generate_shadows <filename> <key> <s> <r> <size='small','medium','large','xlarge'>(optional)
 # python secretsharing.py recover_key <filename> <shadow index 1> <shadow index 2> ...
 def main():
-    print "entering main"
+    print "* * * * *"
     mode = sys.argv[1] # "generate_shadows" or "recover_key"
     filename = sys.argv[2] # filename to read from or write to
 
@@ -87,7 +87,7 @@ def main():
             shadowfile.write(str(shadows[i]) + "\n" + str(ms[i]))
             print "Shadow",str(i+1),": s =", str(shadows[i]),", m =", str(ms[i])
 
-        print "Done writing to files\n"
+        print "Done writing to files"
 
     #recover a key given at least s number of shadows
     if mode == "recover_key":
@@ -107,6 +107,8 @@ def main():
 
         k = recover_master(p, t, shadows, ms)
         print "The master key is", k
+
+    print "* * * * *"
 
 if __name__ == "__main__":
     main()
