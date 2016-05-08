@@ -6,14 +6,13 @@ Usage:
 (key recovery) python secretsharing.py recover_key <input filename> <indices of available shadows>
 
 Example:
-
-# break 10 into 5 shadows with threshold 2. This generates mysecret.key which holds the original key,
-# mysecret.shared which stores the threshold and the randomly generated p and t values, and
-# mysecret-<1,2,3,4,5>.txt which hold the (shadow, modulus) pairs from the algorithm.
 python secretsharing.py generate_shadows mysecret 10 2 5
+(break 10 into 5 shadows with threshold 2. This generates mysecret.key which holds the original key,
+mysecret.shared which stores the threshold and the randomly generated p and t values, and
+mysecret-<1,2,3,4,5>.txt which hold the (shadow, modulus) pairs from the algorithm.)
 
-# recover the key using mysecret-3.shadow and mysecret-4.shadow
 python secretsharing.py recover_key mysecret 3 4
+(recover the key using mysecret-3.shadow and mysecret-4.shadow)
 
 The algorithm goes as follows:
 1. Decide on a key K and a threshold scheme (s, r).
