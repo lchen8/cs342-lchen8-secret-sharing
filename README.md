@@ -15,8 +15,6 @@ python secretsharing.py generate_shadows mysecret 10 2 5
 # recover the key using mysecret-3.shadow and mysecret-4.shadow
 python secretsharing.py recover_key mysecret 3 4
 
-************
-
 The algorithm goes as follows:
 1. Decide on a key K and a threshold scheme (s, r).
 2. Choose prime p and pairwise co-prime m_1,...,m_r such that the product of the s smallest m’s is greater than p times the (s-1) largest m’s.
