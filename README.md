@@ -1,9 +1,9 @@
 This is a secret sharing program written by me (Lily Chen) for my CS342 Computer Security final project. Last edited: May 2016
 
 # Usage
-(shadow generation) python secretsharing.py generate_shadows <output filename> <key> <threshold> <total shadows>
+(shadow generation) python secretsharing.py generate_shadows output filename key threshold total_shadows
 
-(key recovery) python secretsharing.py recover_key <input filename> <indices of available shadows>
+(key recovery) python secretsharing.py recover_key input_filename shadow_index_1 shadow_index_2 ...
 
 # Example
 python secretsharing.py generate_shadows mysecret 10 2 5
