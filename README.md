@@ -2,15 +2,18 @@ This is a secret sharing program written by me (Lily Chen) for my CS342 Computer
 
 # Usage
 (shadow generation) python secretsharing.py generate_shadows <output filename> <key> <threshold> <total shadows>
+
 (key recovery) python secretsharing.py recover_key <input filename> <indices of available shadows>
 
 # Example
 python secretsharing.py generate_shadows mysecret 10 2 5
+
 (break 10 into 5 shadows with threshold 2. This generates mysecret.key which holds the original key,
 mysecret.shared which stores the threshold and the randomly generated p and t values, and
 mysecret-<1,2,3,4,5>.txt which hold the (shadow, modulus) pairs from the algorithm.)
 
 python secretsharing.py recover_key mysecret 3 4
+
 (recover the key using mysecret-3.shadow and mysecret-4.shadow)
 
 # The Algorithm
