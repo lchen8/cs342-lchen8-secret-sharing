@@ -32,5 +32,7 @@ To decrypt the key, you need to know p, t, and at least s of the (key, modulus) 
 3. Then K = x - t*p
 
 Additionally, I referenced the following functions in utils.py:
+
 Primality checking: https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#Python 
+
 Euclidean algorithm for multiplicative inverse modulo n: https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm
